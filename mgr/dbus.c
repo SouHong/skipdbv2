@@ -257,7 +257,7 @@ int parse_list_result(dbclient *client) {
         p1 = strstr(p2, " ");
         *p1 = '=';
 
-        if(client->buf[n2-1] != '\n') {
+        if(client->buf[n2-1] != '\n') { /* skipd will change '\n' to '\0' and save */
             printf("%s\n", p2);
         } else {
             printf("%s", p2);
