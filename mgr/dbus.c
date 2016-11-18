@@ -257,7 +257,7 @@ int parse_list_result(dbclient *client) {
         p1 = strstr(p2, " ");
         *p1 = '=';
 
-        if(p2[n2-1] != '\n') {
+        if(client->buf[n2-1] != '\n') {
             printf("%s\n", p2);
         } else {
             printf("%s", p2);
